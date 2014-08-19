@@ -19,6 +19,8 @@ end
 @test.each do |x| 
   puts x["comments_url"]
   c += 1
+  hash = x["sha"]
+  puts "The hashes #{hash}"
 end
 
 puts "There are #{c} commits"

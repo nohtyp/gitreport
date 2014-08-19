@@ -3,7 +3,7 @@ require 'curl'
 require 'curb'
 require 'json'
 
-c=0
+commits=0
 url = ["https://api.github.com/repos/nohtyp/linode/commits"]
 
 
@@ -18,10 +18,12 @@ url.each do |url|
 end
 
 @test.each do |x| 
+  commits += 1
   puts x["comments_url"]
-  c += 1
+  puts "Commit message: #{x["commit"]["message"]}"
+  puts "Commit was push by: #{x["commit"]["committer"]["name"]}"
   puts "The hashes #{x["sha"]}"
   puts
 end
 
-puts "There are #{c} commits"
+puts "There are #{commits} commits"

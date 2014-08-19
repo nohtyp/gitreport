@@ -20,8 +20,8 @@ end
 @test.each do |x| 
   puts x["comments_url"]
   c += 1
-  hash = x["sha"]
-  puts "The hashes #{hash}"
+  puts "The hashes #{x["sha"]}"
+  puts
 end
 
 puts "There are #{c} commits"

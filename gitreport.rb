@@ -3,9 +3,10 @@ require 'curl'
 require 'curb'
 require 'json'
 
+c=0
 url = ["https://api.github.com/repos/nohtyp/linode/commits"]
 
-c=0
+
 
 gitobj = Curl::Easy.new
 

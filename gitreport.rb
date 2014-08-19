@@ -22,7 +22,7 @@ end
   puts x["comments_url"]
   puts "Commit message: #{x["commit"]["message"]}"
   puts "Commit was push by: #{x["commit"]["committer"]["name"]}"
-  puts "The hashes #{x["sha"]}"
+  puts "The commit hash: #{x["sha"]}"
   puts
 end
 

@@ -20,7 +20,7 @@ end
 @test.each do |x| 
   commits += 1
   puts "Commit message: #{x["commit"]["message"]}"
-  puts "Commit was push by: #{x["commit"]["committer"]["name"]} at #{x["commit"]["committer"]["date"]}"
+  puts "Commit was push by: #{x["commit"]["committer"]["name"]}" 
   date = "#{x["commit"]["committer"]["date"]}".split("T")
   puts "The commit hash: #{x["sha"]}"
   puts "Message was pushed on: #{date[0]} at #{date[1]}"
